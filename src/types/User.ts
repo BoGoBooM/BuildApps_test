@@ -1,12 +1,12 @@
 export type User = {
   login: {
-    uuid: string;
+    uuid: string
   }
   name: {
-    first: string;
-    last: string;
-  };
-  gender: string;
-  email: string;
-  nat: string;
+    first: string
+    last: string
+  }
+  gender: string
+  email: string
+  nat: string
 }

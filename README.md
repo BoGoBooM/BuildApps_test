@@ -12,9 +12,9 @@ The app fetches users from the [Random User API](https://randomuser.me/) and dis
 ### Filtering
 
 - **By Gender**:  
-  Male / Female / All  
+  Male / Female / All
 - **By Nationality**:  
-  US, GB, FR, DE, AU, UA  
+  US, GB, FR, DE, AU, UA
 
 Filtering is handled **server-side** via query parameters.
 
@@ -27,7 +27,7 @@ Filtering is handled **server-side** via query parameters.
 ### Table Columns
 
 | First Name | Last Name | Gender | Email | Nationality |
-|------------|-----------|--------|-------|-------------|
+| ---------- | --------- | ------ | ----- | ----------- |
 
 ---
 
@@ -64,17 +64,17 @@ npm start
 ## App will be available at:
 
 - http://localhost:3000  
-or  
+  or
 - http://localhost:5173/ (depending on your setup)
 
 ---
 
 ## Requirements Met
 
-- [x] Server-side pagination  
-- [x] Server-side filtering by gender and nationality  
-- [x] Responsive and clean UI using Tailwind CSS  
-- [x] Proper use of TypeScript and React best practices  
+- [x] Server-side pagination
+- [x] Server-side filtering by gender and nationality
+- [x] Responsive and clean UI using Tailwind CSS
+- [x] Proper use of TypeScript and React best practices
 
 ---
 
