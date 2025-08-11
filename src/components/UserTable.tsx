@@ -3,7 +3,7 @@ import type { User } from '../types/User'
 import downArrow from '../assets/down.png'
 
 type SortIconProps = {
-  order: 'asc' | 'desc'
+  order: 'asc' | 'desc' | ''
 }
 
 const SortIcon: React.FC<SortIconProps> = ({ order }) => (
@@ -20,7 +20,7 @@ type UserTableProps = {
   users: User[]
   loading: boolean
   sortField: string
-  sortOrder: 'asc' | 'desc'
+  sortOrder: 'asc' | 'desc' | ''
   onSort: (field: 'first' | 'last' | 'email' | 'gender' | 'nat') => void
 }
 
