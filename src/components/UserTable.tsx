@@ -89,8 +89,8 @@ export const UserTable: React.FC<UserTableProps> = ({
           </tr>
         </thead>
         <tbody className="divide-y divide-[#eee1d4]">
-          {users.map((user) => (
-            <tr key={user.login.uuid} className="hover:bg-[#f0d8ce] transition-colors">
+          {users.map((user, index) => (
+            <tr key={user?.login?.uuid || index} className="hover:bg-[#f0d8ce] transition-colors">
               <td className="px-4 py-3 text-[#3e2f25] font-medium">
                 {loading ? (
                   <div className="h-5 w-28 bg-gray-300 animate-pulse rounded" />

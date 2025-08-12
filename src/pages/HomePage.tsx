@@ -111,25 +111,24 @@ export const HomePage: React.FC = () => {
         nationalities={nationalities}
       />
 
-      {loading && (
-        <div className="flex items-center justify-center w-56 h-56 text-xs font-medium text-center p-0.5 leading-none rounded-full px-2 absolute -translate-y-1/2 -translate-x-1/2 top-2/4 left-1/2">
-          {/* Твій скелетон або лоадер тут */}
-          Loading...
-        </div>
-      )}
-
-      {error && <div className="text-red-600">{error}</div>}
-
-      {!loading && !error && users.length === 0 && (
+      {error ? (
+        <div className="text-red-600">{error}</div>
+      ) : loading ? (
+        <UserTable
+          users={Array(10).fill({}) as User[]}
+          loading={true}
+          sortField={sortField}
+          sortOrder={sortOrder}
+          onSort={handleSort}
+        />
+      ) : users.length === 0 ? (
         <div className="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50" role="alert">
           <span className="font-medium">Info alert!</span> No users found.
         </div>
-      )}
-
-      {!error && users.length > 0 && (
+      ) : (
         <UserTable
           users={sortedUser}
-          loading={loading}
+          loading={false}
           sortField={sortField}
           sortOrder={sortOrder}
           onSort={handleSort}
